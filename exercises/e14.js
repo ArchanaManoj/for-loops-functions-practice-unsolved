@@ -7,6 +7,29 @@
 
 export function getClientsWithWrongBalance(array) {
   // Your code goes here...
+  const balanceErrorArray = [];
+  let tempArray = [];
+
+  for(let item in array) {
+
+    tempArray = array[item];
+    let arrayDeposit =array[item].deposits;
+    let arrayWithdrawal = array[item].withdrawals;
+    let sumDeposit =0;
+    let sumWithdrawal = 0;
+
+    for(let elem in arrayDeposit) {
+      sumDeposit += arrayDeposit[elem];
+    }
+    for(let elem in arrayWithdrawal) {
+      sumWithdrawal += arrayWithdrawal[elem];
+    }
+    if((sumDeposit -  sumWithdrawal) !== array[item].balance) {
+
+      balanceErrorArray.push(array[item]);
+    }
+  }
+  return balanceErrorArray;
 
 }
 

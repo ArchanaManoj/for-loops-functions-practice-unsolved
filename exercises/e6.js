@@ -6,6 +6,16 @@
 export function getClientWithNoMoney(array) {
   // Your code goes here...
 
+  const clientWithZeroBalance = [];
+
+  for(let item in array) {
+    if(array[item].balance == 0.0) {
+      clientWithZeroBalance.push(array[item].name);
+    }
+  }
+
+  return clientWithZeroBalance;
+
 }
 
 // === TEST YOURSELF ===
