@@ -8,10 +8,10 @@ export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
   const leastBalanceArray = [];
   let leastBalance = array[0].balance;
-  for(let item in array) {
-    if(array[item].balance < leastBalance && array[item].balance > 0) {
-      leastBalance = array[item].balance;
-      leastBalanceArray.push(array[item]);
+  for(let item of array) {
+    if(item.balance < leastBalance && item.balance > 0) {
+      leastBalance = item.balance;
+      leastBalanceArray.push(item);
     }
   }
   return leastBalanceArray;

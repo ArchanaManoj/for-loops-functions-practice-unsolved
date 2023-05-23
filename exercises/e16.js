@@ -8,12 +8,12 @@
 export function flatArrays(array) {
   // Your code goes here...
   const arr = [];
-  for(let item in array) {
-    if(array[item].length == 1) {
-      arr.push(array[item]);
+  for(let item of array) {
+    if(item.length == 1) {
+      arr.push(item);
     } else {
-        for(let elem in array[item]) {
-          arr.push(array[item][elem]);
+        for(let elem of item) {
+          arr.push(elem);
         }
     }
   }

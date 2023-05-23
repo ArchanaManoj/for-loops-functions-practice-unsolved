@@ -33,10 +33,17 @@ export function getStringSum(str) {
   // Your code goes here...
 
   let sum = 0;
-  const charArray = str.split('');
+  // const charArray = str.split('');
 
-  for(let i=0; i < charArray.length; i++) {
-    let parseChar = parseInt(charArray[i]);
+  // for(let i=0; i < charArray.length; i++) {
+  //   let parseChar = parseInt(charArray[i]);
+  //   if(!isNaN(parseChar)) {
+  //     sum += parseChar;
+  //   }
+  // }
+
+  for(let i=0; i < str.length; i++) {
+    let parseChar = parseInt(str[i]);
     if(!isNaN(parseChar)) {
       sum += parseChar;
     }

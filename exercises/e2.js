@@ -5,11 +5,17 @@
 export function getNumbersWithSquareRoots(max) {
   // Your code goes here...
 
+  // const arrayOfSqrRoots = [];
+  // for(let i=0; i <= max; i++) {
+  //   if(Number.isInteger(Math.sqrt(i))) {
+  //     arrayOfSqrRoots.push(i);
+  //   }
+  // }
+  // return arrayOfSqrRoots;
+
   const arrayOfSqrRoots = [];
-  for(let i=0; i <= max; i++) {
-    if(Number.isInteger(Math.sqrt(i))) {
-      arrayOfSqrRoots.push(i);
-    }
+  for(let i=0; i*i < max; i++) {
+    arrayOfSqrRoots.push(i*i);
   }
   return arrayOfSqrRoots;
 }
